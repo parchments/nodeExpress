@@ -1,25 +1,22 @@
-## nodeJs遇到的问题：
+开源node+express增删改查接口
 
-1、本地访问不了已上传的图片，需要开启静态资源路径访问  
-解决办法：  
-const pathname = __dirname;  
-//静态文件访问  
-app.use(express.static(pathname));
+接口介绍：
 
-## mysql遇到的问题：
-1、42000 check the manual that corresponds to your MySQL server version for the right syntax to use near ':'http://localhost:8888//uploads/images/1583031150933-net.jpg', planImagePathArr' at line 1"
-{code: 0, message: "名称不可重复添加！", affectedRows: {code: "ER_PARSE_ERROR", errno: 1064,…}}
-affectedRows: {code: "ER_PARSE_ERROR", errno: 1064,…}
-code: "ER_PARSE_ERROR"
-errno: 1064
-index: 0
-sql: "update dream_list set name='12', price='1', age='1', experience='1', education='1', analysis='1', introduce='1', duty='1', ask='1',coverImagePath:'http://localhost:8888//uploads/images/1583031150933-net.jpg', planImagePathArray=http://localhost:8888//uploads/images/1583031159549-c++.jpg-join-http://localhost:8888//uploads/images/1583031163955-pm.jpg-join-http://localhost:8888//uploads/images/1583031167555-前端开发.jpg, viedoUrl='http://localhost:8888//uploads/video/1583031154952-腾讯前端开发工程师.mp4' where id='35'"
-sqlMessage: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':'http://localhost:8888//uploads/images/1583031150933-net.jpg', planImagePathArr' at line 1"
-sqlState: "42000"
-code: 0
-message: "名称不可重复添加！"
+├── nodeExpress_MIT  
+│   ├── routes (路由集合)  
+│   │   ├── collection.js (收藏列表增删改查接口)  
+│   │   ├── dream.js (梦想列表列表增删改查接口)  
+│   │   ├── upload.js (上传图片、视频接口)  
+│   │   ├── user.js (用户列表增删改查)  
+│   ├── sql(用户管理列表文件)  
+│   ├── uploads(文件存储)  
+│   ├── sql.js (用户列表增删改查的sql语句)  
+│   │── app.js (启动)  
+│   │── connect.js (连接池)  
+│   │── package.json (配置)
 
-解决方案：
-1、检查是否使用了mysql关键字
-2、检查语法是否正确（赋值不是用‘:’ ,而是‘=’）
-3、检查数据库类型是否正确
+最终效果展示
+
+**微信小程序**
+
+![](https://oscimg.oschina.net/oscnet/up-6db35bb99a6b0a87fb356cd3ae644a18e85.JPEG)
