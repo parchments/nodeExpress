@@ -20,3 +20,6 @@
 **微信小程序**
 
 ![](https://oscimg.oschina.net/oscnet/up-6db35bb99a6b0a87fb356cd3ae644a18e85.JPEG)
+
+更多开发细节请浏览:
+https://juejin.im/post/5eb607086fb9a04340659397
